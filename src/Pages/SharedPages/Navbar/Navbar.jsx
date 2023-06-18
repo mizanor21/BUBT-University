@@ -1,107 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 
 const Navbar = () => {
-  const navItems = (
-    <>
-      <li className="font-serif">
-        <NavLink
-          className="bg-white text-blue-900 text-lg border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200"
-          to={""}
-        >
-          Home
-        </NavLink>
-      </li>
-      <li className="font-serif">
-        <NavLink
-          className="bg-white text-blue-900 text-lg border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200"
-          to={""}
-        >
-          About
-        </NavLink>
-      </li>
-      <li className="font-serif" tabIndex={0}>
-        <details>
-          <summary className="bg-white text-blue-900 text-lg  border-white border-b-4 hover:border-green-600">
-            Academics
-          </summary>
-          <ul className="p-2">
-            <li className="font-serif">
-              <a>Submenu 1</a>
-            </li>
-            <li className="font-serif">
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
-      <li className="font-serif" tabIndex={0}>
-        <details>
-          <summary className="bg-white text-blue-900 text-lg  border-white border-b-4 hover:border-green-600">
-            Admission
-          </summary>
-          <ul className="p-2">
-            <li className="font-serif">
-              <a>Submenu 1</a>
-            </li>
-            <li className="font-serif">
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
-      <li className="font-serif" tabIndex={0}>
-        <details>
-          <summary className="bg-white text-blue-900 text-lg  border-white border-b-4 hover:border-green-600">
-            Students
-          </summary>
-          <ul className="p-2">
-            <li className="font-serif">
-              <a>Submenu 1</a>
-            </li>
-            <li className="font-serif">
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
-      <li className="font-serif" tabIndex={0}>
-        <details>
-          <summary className="bg-white text-blue-900 text-lg  border-white border-b-4 hover:border-green-600">
-            Clubs
-          </summary>
-          <ul className="p-2">
-            <li className="font-serif">
-              <a>Submenu 1</a>
-            </li>
-            <li className="font-serif">
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-      <li className="font-serif">
-        <NavLink
-          className="bg-white text-blue-900 text-lg border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200"
-          to={""}
-        >
-          Contacts
-        </NavLink>
-      </li>
-    </>
-  );
+  const handleMenuEnter = (menuIndex) => {
+    setActiveMenu(menuIndex);
+  };
+
+  const handleMenuLeave = () => {
+    setActiveMenu(null);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/" },
+    {
+      label: "Academics",
+      submenu: [
+        { label: "Submenu 1", path: "/" },
+        { label: "Submenu 2", path: "/" },
+      ],
+    },
+    {
+      label: "Admission",
+      submenu: [
+        { label: "Submenu 1", path: "/" },
+        { label: "Submenu 2", path: "/" },
+      ],
+    },
+    {
+      label: "Students",
+      submenu: [
+        { label: "Submenu 1", path: "/" },
+        { label: "Submenu 2", path: "/" },
+      ],
+    },
+    {
+      label: "Clubs",
+      submenu: [
+        { label: "Submenu 1", path: "/" },
+        { label: "Submenu 2", path: "/" },
+      ],
+    },
+    { label: "Contacts", path: "/" },
+  ];
+
   return (
-    <div className="bg-white sticky top-0">
-      <div className="container mx-auto navbar">
+    <div className="bg-white sticky top-0 z-50">
+      <div className="container mx-auto navbar flex items-center justify-between py-4">
         <div className="navbar-start">
           <NavLink to={"/"}>
-            <img className="w-72" src={logo} alt="" />
+            <img className="w-64" src={logo} alt="" />
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navItems}</ul>
+          <ul className="menu menu-horizontal px-1">
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                className="font-serif relative"
+                onMouseEnter={() => handleMenuEnter(index)}
+                onMouseLeave={handleMenuLeave}
+              >
+                <NavLink
+                  className="text-blue-900 bg-white text-lg  border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200 px-4 py-2"
+                  to={item.path}
+                >
+                  {item.label}
+                </NavLink>
+                {item.submenu && activeMenu === index && (
+                  <ul className="p-2 absolute top-full left-0 z-10 bg-white border border-gray-200">
+                    {item.submenu.map((subItem, subIndex) => (
+                      <li key={subIndex} className="font-serif">
+                        <NavLink
+                          className="block py-2 px-4 bg-white text-blue-900 hover:text-green-600"
+                          to={subItem.path}
+                        >
+                          {subItem.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
@@ -120,31 +110,58 @@ const Navbar = () => {
               />
             </svg>
           </button>
-
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 right-0"
+          <button
+            className="btn btn-ghost btn-circle lg:hidden"
+            onClick={toggleDropdown}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {navItems}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </button>
+          {isDropdownOpen && (
+            <ul className="menu menu-dropdown px-1 absolute top-full left-0 bg-white border border-gray-200">
+              {navItems.map((item, index) => (
+                <li
+                  key={index}
+                  className="font-serif relative"
+                  onMouseEnter={() => handleMenuEnter(index)}
+                  onMouseLeave={handleMenuLeave}
+                >
+                  <NavLink
+                    className="text-blue-900 text-lg border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200 px-4 py-2"
+                    to={item.path}
+                  >
+                    {item.label}
+                  </NavLink>
+                  {item.submenu && activeMenu === index && (
+                    <ul className="p-2 bg-white border border-gray-200">
+                      {item.submenu.map((subItem, subIndex) => (
+                        <li key={subIndex} className="font-serif">
+                          <NavLink
+                            className="block py-2 px-4 text-blue-900 hover:text-green-600"
+                            to={subItem.path}
+                          >
+                            {subItem.label}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
-          </div>
+          )}
         </div>
       </div>
     </div>
