@@ -24,7 +24,7 @@ const Navbar = () => {
     {
       label: "Academics",
       submenu: [
-        { label: "Submenu 1", path: "/" },
+        { label: "history", path: "/history" },
         { label: "Submenu 2", path: "/" },
       ],
     },
