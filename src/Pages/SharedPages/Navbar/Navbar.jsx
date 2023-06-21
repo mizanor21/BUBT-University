@@ -53,6 +53,7 @@ const Navbar = () => {
   ];
 
   return (
+    //this is navbar
     <div className="bg-white sticky top-0 z-50">
       <div className="container mx-auto navbar flex items-center justify-between py-4">
         <div className="navbar-start">
