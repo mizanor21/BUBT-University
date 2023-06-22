@@ -20,11 +20,26 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "About", path: "/" },
+    {
+      label: "About",
+      submenu: [
+        { label: "History", path: "/history" },
+        { label: "Mission & Objectives", path: "/missionandobjectives" },
+        { label: "Campus", path: "/campus" },
+        {
+          label: "General Rules and Regulations",
+          path: "/GeneralRulesandRegulations",
+        },
+        {
+          label: "Career",
+          path: "/career",
+        },
+      ],
+    },
     {
       label: "Academics",
       submenu: [
-        { label: "history", path: "/history" },
+        { label: "SubMenu1", path: "/" },
         { label: "Submenu 2", path: "/" },
       ],
     },
@@ -53,35 +68,36 @@ const Navbar = () => {
   ];
 
   return (
-    //this is navbar
-    <div className="bg-white sticky top-0 z-50">
-      <div className="container mx-auto navbar flex items-center justify-between py-4">
-        <div className="navbar-start">
+    <div className="bg-white sticky top-0 z-50 shadow-md font-serif">
+      <div className="container mx-auto flex items-center justify-between py-4">
+        <div className="flex items-center">
           <NavLink to={"/"}>
-            <img className="w-64" src={logo} alt="" />
+            <img className="w-52" src={logo} alt="" />
           </NavLink>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="hidden lg:flex">
+          <ul className="flex space-x-4">
             {navItems.map((item, index) => (
               <li
                 key={index}
-                className="font-serif relative"
+                className="relative text-gray-800"
                 onMouseEnter={() => handleMenuEnter(index)}
                 onMouseLeave={handleMenuLeave}
               >
                 <NavLink
-                  className="text-blue-900 bg-white text-lg  border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200 px-4 py-2"
+                  className="py-2 px-4 border-b-4 border-transparent hover:text-green-600 hover:border-green-600 truncate"
+                  activeClassName="border-green-600"
                   to={item.path}
                 >
                   {item.label}
                 </NavLink>
                 {item.submenu && activeMenu === index && (
-                  <ul className="p-2 absolute top-full left-0 z-10 bg-white border border-gray-200">
+                  <ul className="absolute left-0 mt-2 py-2 bg-white rounded shadow-lg flex flex-wrap">
                     {item.submenu.map((subItem, subIndex) => (
-                      <li key={subIndex} className="font-serif">
+                      <li key={subIndex}>
                         <NavLink
-                          className="block py-2 px-4 bg-white text-blue-900 hover:text-green-600"
+                          className="block px-4 py-2 text-gray-800 hover:bg-gray-200 truncate"
+                          activeClassName="text-green-600"
                           to={subItem.path}
                         >
                           {subItem.label}
@@ -94,11 +110,11 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
+        <div className="flex items-center">
+          <button className="btn btn-circle btn-primary mr-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -112,12 +128,12 @@ const Navbar = () => {
             </svg>
           </button>
           <button
-            className="btn btn-ghost btn-circle lg:hidden"
+            className="btn btn-circle btn-primary lg:hidden"
             onClick={toggleDropdown}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -131,26 +147,28 @@ const Navbar = () => {
             </svg>
           </button>
           {isDropdownOpen && (
-            <ul className="menu menu-dropdown px-1 absolute top-full left-0 bg-white border border-gray-200">
+            <ul className="absolute top-full left-0 mt-2 py-2 bg-white rounded shadow-lg flex flex-wrap">
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className="font-serif relative"
+                  className="relative text-gray-800"
                   onMouseEnter={() => handleMenuEnter(index)}
                   onMouseLeave={handleMenuLeave}
                 >
                   <NavLink
-                    className="text-blue-900 text-lg border-white border-b-4 hover:text-green-600 hover:border-green-600 hover:bg-gray-200 px-4 py-2"
+                    className="block px-4 py-2 border-b border-transparent hover:text-green-600 hover:border-green-600 truncate"
+                    activeClassName="border-green-600"
                     to={item.path}
                   >
                     {item.label}
                   </NavLink>
                   {item.submenu && activeMenu === index && (
-                    <ul className="p-2 bg-white border border-gray-200">
+                    <ul className="absolute left-full top-0 mt-0 py-2 bg-white rounded shadow-lg">
                       {item.submenu.map((subItem, subIndex) => (
-                        <li key={subIndex} className="font-serif">
+                        <li key={subIndex}>
                           <NavLink
-                            className="block py-2 px-4 text-blue-900 hover:text-green-600"
+                            className="block px-4 py-2 text-gray-800 hover:bg-gray-200 truncate"
+                            activeClassName="text-green-600"
                             to={subItem.path}
                           >
                             {subItem.label}
