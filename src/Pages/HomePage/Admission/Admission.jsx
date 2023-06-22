@@ -5,6 +5,7 @@ import icon3 from "../../../assets/images/icons/icon-3.png";
 import icon4 from "../../../assets/images/icons/icon-4.png";
 import admission from "../../../assets/images/convocation.jpeg";
 import "./Admission.css";
+import Countdown from "./CountDown";
 
 const Admission = () => {
   return (
@@ -67,7 +68,8 @@ const Admission = () => {
           <p className="text-lg font-serif text-gray-300">
             A Great University to Materialize Your Dream!
           </p>
-          <button className="btn text-white bg-blue-600 border-none hover:bg-green-600 mt-10">
+          <Countdown></Countdown>
+          <button className="btn mt-3 text-white bg-blue-600 border-none hover:bg-green-600">
             Get Admission
           </button>
         </div>
