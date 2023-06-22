@@ -1,46 +1,29 @@
 import React, { useState, useEffect } from "react";
 
 const Countdown = () => {
-  const [countdown, setCountdown] = useState({
-    days: 40,
-    hours: 5,
-    minutes: 56,
-    seconds: 30,
-  });
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("2023-08-05"); // Replace with your target date
+    const currentDate = new Date();
+
+    const totalSeconds = Math.floor((targetDate - currentDate) / 1000);
+    if (totalSeconds <= 0) {
+      // Countdown has reached 0, do something here
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(totalSeconds / (3600 * 24));
+    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const [countdown, setCountdown] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const countdownInterval = setInterval(() => {
-      setCountdown((prevCountdown) => {
-        // Calculate the new countdown values
-        let newCountdown = { ...prevCountdown };
-
-        if (newCountdown.seconds > 0) {
-          newCountdown.seconds--;
-        } else {
-          newCountdown.seconds = 59;
-
-          if (newCountdown.minutes > 0) {
-            newCountdown.minutes--;
-          } else {
-            newCountdown.minutes = 59;
-
-            if (newCountdown.hours > 0) {
-              newCountdown.hours--;
-            } else {
-              newCountdown.hours = 23;
-
-              if (newCountdown.days > 0) {
-                newCountdown.days--;
-              } else {
-                // Countdown has reached 0, do something here
-                clearInterval(countdownInterval);
-              }
-            }
-          }
-        }
-
-        return newCountdown;
-      });
+      setCountdown(calculateTimeLeft());
     }, 1000);
 
     // Clean up the interval when the component unmounts
@@ -50,7 +33,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="grid grid-flow-col gap-5 my-5 font-serif text-center auto-cols-max">
+    <div className="grid grid-flow-col gap-5 my-5 text-center auto-cols-max">
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": countdown.days }}></span>
