@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GeneralNotices from "./GeneralNotices";
 import ClassNotice from "./ClassNotice";
 import ExamNotice from "./ExamNotice";
+import Events from "./Events";
 
 const TabNoticeProgramsEvent = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -10,6 +11,7 @@ const TabNoticeProgramsEvent = () => {
   const [generalNotices, setGeneralNotices] = useState([]);
   const [classNotices, setClassNotices] = useState([]);
   const [examNotices, setExamNotices] = useState([]);
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/notice-general")
@@ -27,6 +29,12 @@ const TabNoticeProgramsEvent = () => {
     fetch("http://localhost:5000/notice-exam")
       .then((res) => res.json())
       .then((data) => setExamNotices(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/events")
+      .then((res) => res.json())
+      .then((data) => setEvents(data));
   }, []);
 
   const handleTabClick = (tabIndex) => {
@@ -100,8 +108,10 @@ const TabNoticeProgramsEvent = () => {
           </div>
         )}
         {activeTab === 3 && (
-          <div>
-            <h3>Tab 3 Content</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {events.map((event) => (
+              <Events key={event._id} event={event}></Events>
+            ))}
           </div>
         )}
       </div>
