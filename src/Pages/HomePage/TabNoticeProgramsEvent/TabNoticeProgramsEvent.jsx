@@ -4,6 +4,7 @@ import GeneralNotices from "./GeneralNotices";
 import ClassNotice from "./ClassNotice";
 import ExamNotice from "./ExamNotice";
 import Events from "./Events";
+import Programs from "./Programs/Programs";
 
 const TabNoticeProgramsEvent = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -66,8 +67,19 @@ const TabNoticeProgramsEvent = () => {
 
       <div className="tab-content min-h-screen mt-5">
         {activeTab === 1 && (
-          <div>
-            <h3>Tab 1 Content</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <h2 className="text-xl text-center font-serif text-slate-600 font-bold bg-slate-200">
+                Undergraduate
+              </h2>
+              <Programs></Programs>
+            </div>
+            <div>
+              <h2 className="text-xl text-center font-serif text-slate-600 font-bold bg-slate-200">
+                Graduate
+              </h2>
+              <Programs></Programs>
+            </div>
           </div>
         )}
         {activeTab === 2 && (
