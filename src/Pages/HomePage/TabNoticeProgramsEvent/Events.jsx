@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Events = ({ event }) => {
-  const { img, title, createdAt } = event;
+  const { _id, img, title, createdAt } = event;
   return (
-    <Link to={""}>
+    <Link to={`/event-details/${_id}`}>
       <div className="card glass mx-5 md:mx-0">
         <figure className="h-60">
           <img src={img} alt="car!" />

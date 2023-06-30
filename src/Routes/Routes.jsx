@@ -3,6 +3,7 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/HomePage/Home/Home";
 import History from "../Pages/OtherPages/About/History/History";
 import NoticeDetails from "../Pages/HomePage/TabNoticeProgramsEvent/NoticeDetails";
+import EventDetails from "../Pages/HomePage/TabNoticeProgramsEvent/EventDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
         element: <NoticeDetails></NoticeDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/notice-details/${params.id}`),
+      },
+      {
+        path: "/event-details/:id",
+        element: <EventDetails></EventDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/event-details/${params.id}`),
       },
     ],
   },
