@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ClassNotice = ({ classNotice }) => {
   return (
-    <div className="border border-b-2 p-2">
+    <div className="border p-2">
       <Link
         className="text-lg font-bold"
         to={`/notice-details/${classNotice._id}`}
@@ -11,7 +11,9 @@ const ClassNotice = ({ classNotice }) => {
         {classNotice.title}
       </Link>
       <br />
-      <small>Published on {classNotice.createdAt}</small>
+      <small className="text-slate-500">
+        Published on {classNotice.createdAt}
+      </small>
       <br />
     </div>
   );

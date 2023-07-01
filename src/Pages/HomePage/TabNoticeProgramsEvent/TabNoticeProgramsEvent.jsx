@@ -43,17 +43,17 @@ const TabNoticeProgramsEvent = () => {
   };
 
   return (
-    <div className="tabs block my-5 container mx-auto">
+    <div className="tabs block mt-5 mb-10 container mx-auto">
       <div className="text-center uppercase text-5xl font-bold">
         <Link
-          className={`tab tab-bordered ${activeTab === 1 ? "tab-active" : ""}`}
-          onClick={() => handleTabClick(1)}
+          className={`tab tab-bordered ${activeTab === 2 ? "tab-active" : ""}`}
+          onClick={() => handleTabClick(2)}
         >
           Programs
         </Link>
         <Link
-          className={`tab tab-bordered ${activeTab === 2 ? "tab-active" : ""}`}
-          onClick={() => handleTabClick(2)}
+          className={`tab tab-bordered ${activeTab === 1 ? "tab-active" : ""}`}
+          onClick={() => handleTabClick(1)}
         >
           Notices
         </Link>
@@ -65,8 +65,8 @@ const TabNoticeProgramsEvent = () => {
         </Link>
       </div>
 
-      <div className="tab-content min-h-screen mt-5">
-        {activeTab === 1 && (
+      <div className="tab-content mt-5">
+        {activeTab === 2 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
               <h2 className="text-xl text-center font-serif text-slate-600 font-bold bg-slate-200">
@@ -82,7 +82,7 @@ const TabNoticeProgramsEvent = () => {
             </div>
           </div>
         )}
-        {activeTab === 2 && (
+        {activeTab === 1 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div>
               <h2 className="text-xl text-center font-serif text-slate-600 font-bold bg-slate-200">
