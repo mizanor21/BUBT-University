@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import Admission from "../Admission/Admission";
 import VideoInfo from "../VideoSection/VideoInfo";
 import Notice from "../TabNoticeProgramsEvent/TabNoticeProgramsEvent";
+import Alumni from "../Alumni/Alumni";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Admission></Admission>
       <VideoInfo></VideoInfo>
       <Notice></Notice>
+      <Alumni></Alumni>
     </div>
   );
 };
