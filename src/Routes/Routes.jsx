@@ -6,6 +6,7 @@ import NoticeDetails from "../Pages/HomePage/TabNoticeProgramsEvent/NoticeDetail
 import EventDetails from "../Pages/HomePage/TabNoticeProgramsEvent/EventDetails";
 import AllStories from "../Pages/HomePage/Alumni/AllStories";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Facultys from "../Pages/OtherPages/Academic/Faculty/Facultys";
 
 const router = createBrowserRouter([
   {
@@ -37,11 +38,22 @@ const router = createBrowserRouter([
         element: <AllStories></AllStories>,
         loader: () => fetch("http://localhost:5000/all-stories"),
       },
+      {
+        path: "/faculty",
+        element: <Facultys></Facultys>,
+        loader: () => fetch("http://localhost:5000/faculty"),
+      },
     ],
   },
   {
     path: "*",
-    element: <ErrorPage></ErrorPage>,
+    element: <Main></Main>,
+    children: [
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>,
+      },
+    ],
   },
 ]);
 

@@ -39,7 +39,7 @@ const Navbar = () => {
     {
       label: "Academics",
       submenu: [
-        { label: "SubMenu1", path: "/" },
+        { label: "Faculty of CSE", path: "/faculty" },
         { label: "Submenu 2", path: "/" },
       ],
     },
