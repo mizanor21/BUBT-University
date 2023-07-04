@@ -1,13 +1,11 @@
 .bg-white {
-  transition: background-color 0.9s ease;
+  transition: top 0.3s ease;
 }
 
-.shrink {
-  background-color: rgba(255, 255, 255, 0.9);
+.show {
+  top: 0;
 }
 
-.shrink .container {
-  transition: padding 0.9s ease;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.hide {
+  top: -100px; /* Adjust the value to hide the navbar completely */
 }
