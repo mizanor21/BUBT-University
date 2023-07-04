@@ -26,11 +26,11 @@ const Navbar = () => {
       label: "About",
       submenu: [
         { label: "History", path: "/history" },
-        { label: "Mission & Objectives", path: "/missionandobjectives" },
+        { label: "Mission & Objectives", path: "/mission-objectives" },
         { label: "Campus", path: "/campus" },
         {
           label: "General Rules and Regulations",
-          path: "/GeneralRulesandRegulations",
+          path: "/general-rules",
         },
         {
           label: "Career",
@@ -41,8 +41,11 @@ const Navbar = () => {
     {
       label: "Academics",
       submenu: [
+        { label: "Evaluation", path: "/evaluation" },
         { label: "Faculty of CSE", path: "/faculty" },
-        { label: "Submenu 2", path: "/" },
+        { label: "Rules And Regulations", path: "/rules-regulations" },
+        { label: "Semester Policy", path: "/semester-policy" },
+        { label: "Special Features", path: "/special-features" },
       ],
     },
     {

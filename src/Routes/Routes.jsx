@@ -8,6 +8,14 @@ import AllStories from "../Pages/HomePage/Alumni/AllStories";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Facultys from "../Pages/OtherPages/Academic/Faculty/Facultys";
 import FacultyDetails from "../Pages/OtherPages/Academic/Faculty/FacultyDetails";
+import MissionAndObjectives from "../Pages/OtherPages/About/MissionAndObjectives/MissionAndObjectives";
+import Campus from "../Pages/OtherPages/About/Campus/Campus";
+import GeneralRules from "../Pages/OtherPages/About/GeneralRoles/GeneralRoles";
+import Career from "../Pages/OtherPages/About/Career/Career";
+import Evaluation from "../Pages/OtherPages/Academic/Evaluation/Evaluation";
+import RulesAndRegulation from "../Pages/OtherPages/Academic/RulesAndRegulation/RulesAndRegulation";
+import SemesterPolicy from "../Pages/OtherPages/Academic/SemesterPolicy/SemesterPolicy";
+import SpecialFeature from "../Pages/OtherPages/Academic/SpecialFeature/SpecialFeature";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +29,38 @@ const router = createBrowserRouter([
       {
         path: "/history",
         element: <History></History>,
+      },
+      {
+        path: "/mission-objectives",
+        element: <MissionAndObjectives></MissionAndObjectives>,
+      },
+      {
+        path: "/campus",
+        element: <Campus></Campus>,
+      },
+      {
+        path: "/general-rules",
+        element: <GeneralRules></GeneralRules>,
+      },
+      {
+        path: "/career",
+        element: <Career></Career>,
+      },
+      {
+        path: "/evaluation",
+        element: <Evaluation></Evaluation>,
+      },
+      {
+        path: "/rules-regulations",
+        element: <RulesAndRegulation></RulesAndRegulation>,
+      },
+      {
+        path: "/semester-policy",
+        element: <SemesterPolicy></SemesterPolicy>,
+      },
+      {
+        path: "/special-features",
+        element: <SpecialFeature></SpecialFeature>,
       },
       {
         path: "/notice-details/:id",
