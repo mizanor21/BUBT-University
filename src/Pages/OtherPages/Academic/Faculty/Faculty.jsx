@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Faculty = ({ faculty }) => {
-  const { img, name, facultyCode, position } = faculty;
+  const { _id, img, name, facultyCode, position } = faculty;
   return (
     <div>
-      <div className="card bg-base-100 border-b-8 border-green-600 hover:border-green-700 hover:animate-pulse shadow-xl">
+      <Link
+        to={`/faculty-details/${_id}`}
+        className="card bg-base-100 border-b-8 border-green-600 hover:border-green-700 hover:animate-pulse shadow-xl"
+      >
         <figure>
           <img className="w-full" src={img} alt={name} />
         </figure>
@@ -15,7 +19,7 @@ const Faculty = ({ faculty }) => {
             Faculty Code: <span className="font-bold">{facultyCode}</span>
           </small>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

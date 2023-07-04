@@ -1,0 +1,13 @@
+.bg-white {
+  transition: background-color 0.9s ease;
+}
+
+.shrink {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.shrink .container {
+  transition: padding 0.9s ease;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -7,6 +7,7 @@ import EventDetails from "../Pages/HomePage/TabNoticeProgramsEvent/EventDetails"
 import AllStories from "../Pages/HomePage/Alumni/AllStories";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Facultys from "../Pages/OtherPages/Academic/Faculty/Facultys";
+import FacultyDetails from "../Pages/OtherPages/Academic/Faculty/FacultyDetails";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,12 @@ const router = createBrowserRouter([
         path: "/faculty",
         element: <Facultys></Facultys>,
         loader: () => fetch("http://localhost:5000/faculty"),
+      },
+      {
+        path: "/faculty-details/:id",
+        element: <FacultyDetails></FacultyDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/faculty-details/${params.id}`),
       },
     ],
   },
