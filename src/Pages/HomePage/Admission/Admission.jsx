@@ -3,7 +3,7 @@ import icon1 from "../../../assets/images/icons/icon-1.png";
 import icon2 from "../../../assets/images/icons/icon-2.png";
 import icon3 from "../../../assets/images/icons/icon-3.png";
 import icon4 from "../../../assets/images/icons/icon-4.png";
-import admission from "../../../assets/images/convocation.jpeg";
+import admission from "../../../assets/images/admission.jpg";
 import "./Admission.css";
 import Countdown from "./CountDown";
 
@@ -49,10 +49,10 @@ const Admission = () => {
         </div>
       </div>
       <div className="lg:flex">
-        <div className="lg:w-1/2">
-          <img src={admission} alt="" />
+        <div className="lg:w-1/2 lg:h-[500px]">
+          <img src={admission} className="lg:h-[500px] lg:w-full" alt="" />
         </div>
-        <div className="lg:w-1/2 p-10 content-bg">
+        <div className="lg:w-1/2 lg:h-[500px] p-10 content-bg">
           <h2 className="text-3xl font-serif text-white font-bold">
             Apply for Admission
           </h2>

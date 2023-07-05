@@ -38,7 +38,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative w-full h-[250px] md:h-[600px] lg:h-[700px]">
-        <img src={slider3} className="w-full h-full object-cover" alt="" />
+        <img src={slider4} className="w-full h-full object-cover" alt="" />
         {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif font-bold mb-4">
             Slide 3
@@ -47,7 +47,7 @@ const Banner = () => {
         </div> */}
       </div>
       <div className="relative w-full h-[250px] md:h-[600px] lg:h-[700px]">
-        <img src={slider4} className="w-full h-full object-cover" alt="" />
+        <img src={slider3} className="w-full h-full object-cover" alt="" />
         {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif font-bold mb-4">
             Slide 4
