@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.6f775bb3.css",
-    "main.js": "/static/js/main.44cf87af.js",
+    "main.css": "/static/css/main.ae287ac2.css",
+    "main.js": "/static/js/main.6d427c8f.js",
     "static/js/787.f08b2713.chunk.js": "/static/js/787.f08b2713.chunk.js",
     "static/media/bubt.mp4": "/static/media/bubt.2c664cac7dda40127a4e.mp4",
     "static/media/slider3.jpg": "/static/media/slider3.b96ce640c0e095aee9df.jpg",
     "static/media/convocation.jpeg": "/static/media/convocation.3c8b9eb8c7ea7ce76477.jpeg",
+    "static/media/career.jpg": "/static/media/career.7a6b2282f3defb85a4e9.jpg",
+    "static/media/uni-image-one.jpg": "/static/media/uni-image-one.4bbf430237cb08bbcca5.jpg",
     "static/media/slider1.jpg": "/static/media/slider1.03dcf1737bb27221c3c3.jpg",
     "static/media/slider4.jpg": "/static/media/slider4.b0fdca79a1d7a06f9a82.jpg",
     "static/media/slider2.jpg": "/static/media/slider2.c7fc1156e9f1beb2a97e.jpg",
+    "static/media/uni-image-two.jpg": "/static/media/uni-image-two.19d4f4223e2533436482.jpg",
+    "static/media/bubtlogo.png": "/static/media/bubtlogo.7f43ee3dff96122cb03b.png",
     "static/media/about-bg-2.jpg": "/static/media/about-bg-2.a3ccd45605fce3bd0cb9.jpg",
     "static/media/bg2.png": "/static/media/bg2.37e3d58bb43185331064.png",
     "index.html": "/index.html",
-    "main.6f775bb3.css.map": "/static/css/main.6f775bb3.css.map",
-    "main.44cf87af.js.map": "/static/js/main.44cf87af.js.map",
+    "main.ae287ac2.css.map": "/static/css/main.ae287ac2.css.map",
+    "main.6d427c8f.js.map": "/static/js/main.6d427c8f.js.map",
     "787.f08b2713.chunk.js.map": "/static/js/787.f08b2713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f775bb3.css",
-    "static/js/main.44cf87af.js"
+    "static/css/main.ae287ac2.css",
+    "static/js/main.6d427c8f.js"
   ]
 }
