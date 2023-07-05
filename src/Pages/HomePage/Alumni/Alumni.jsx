@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Alumni = () => {
   const [alumnis, setAlumnis] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/alumni")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/alumni")
       .then((res) => res.json())
       .then((data) => setAlumnis(data));
   }, []);

@@ -16,31 +16,31 @@ const TabNoticeProgramsEvent = () => {
   const [departments, setDepartments] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/notice-general")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/notice-general")
       .then((res) => res.json())
       .then((data) => setGeneralNotices(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/notice-class")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/notice-class")
       .then((res) => res.json())
       .then((data) => setClassNotices(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/notice-exam")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/notice-exam")
       .then((res) => res.json())
       .then((data) => setExamNotices(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/events")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/events")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/department")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/department")
       .then((res) => res.json())
       .then((data) => setDepartments(data));
   }, []);

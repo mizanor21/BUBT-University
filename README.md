@@ -10,15 +10,15 @@
 
 ### Client site
 
-ReactJS
-tailwindCSS
-daisyUI
+- ReactJS
+- tailwindCSS
+- daisyUI
 
 ### Server site
 
-NodeJS
-ExpressJS
+- NodeJS
+- ExpressJS
 
 ### Database
 
-MongoDB
+- MongoDB
