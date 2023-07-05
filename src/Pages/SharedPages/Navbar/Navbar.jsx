@@ -95,7 +95,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between py-4">
         <div className="flex items-center">
           <NavLink to={"/"}>
-            <img className="w-48 md:w-64" src={logo} alt="" />
+            <img className="w-52 md:w-64" src={logo} alt="" />
           </NavLink>
         </div>
         <div className="hidden lg:flex items-center">
