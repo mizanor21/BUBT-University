@@ -10,12 +10,12 @@ const VideoInfo = () => {
         autoPlay
         loop
         muted
-        className="w-[100%] h-[800px] object-cover bg-black bg-opacity-50"
+        className="w-[100%] h-[300px] md:h-[500px] lg:h-[800px] object-cover bg-black bg-opacity-50"
       >
         <source src={bubtVideo} type="video/mp4" />
         <source src={bubtVideo} type="video/ogg" />
       </video>
-      <div className="absolute w-[100%] h-[100%] flex flex-col top-[1500px] md:top-[1900px] lg:top-[1340px] justify-center items-center text-white text-center">
+      <div className="absolute w-[100%] h-[100%] flex flex-col top-[1600px] md:top-[2100px] lg:top-[1400px] justify-center items-center text-white text-center">
         <button onClick={() => window.my_modal_3.showModal()}>
           <img src={videoIcon} alt="" />
         </button>
