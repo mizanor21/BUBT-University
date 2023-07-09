@@ -6,6 +6,7 @@ import icon4 from "../../../assets/images/icons/icon-4.png";
 import admission from "../../../assets/images/admission.jpg";
 import "./Admission.css";
 import Countdown from "./CountDown";
+import AdmissionApply from "../../OtherPages/Admission/AdmissionApply";
 
 const Admission = () => {
   return (
@@ -69,9 +70,21 @@ const Admission = () => {
             A Great University to Materialize Your Dream!
           </p>
           <Countdown></Countdown>
-          <button className="btn mt-3 text-white bg-blue-600 border-none hover:bg-green-600">
+
+          <button
+            className="btn mt-3 text-white bg-blue-600 border-none hover:bg-green-600"
+            onClick={() => window.my_modal_4.showModal()}
+          >
             Get Admission
           </button>
+          <dialog id="my_modal_4" className="modal">
+            <form method="dialog" className="modal-box w-11/12 max-w-5xl">
+              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                ✕
+              </button>
+              <AdmissionApply></AdmissionApply>
+            </form>
+          </dialog>
         </div>
       </div>
     </section>
