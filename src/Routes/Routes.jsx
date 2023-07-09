@@ -16,6 +16,7 @@ import Evaluation from "../Pages/OtherPages/Academic/Evaluation/Evaluation";
 import RulesAndRegulation from "../Pages/OtherPages/Academic/RulesAndRegulation/RulesAndRegulation";
 import SemesterPolicy from "../Pages/OtherPages/Academic/SemesterPolicy/SemesterPolicy";
 import SpecialFeature from "../Pages/OtherPages/Academic/SpecialFeature/SpecialFeature";
+import AdmissionApply from "../Pages/OtherPages/Admission/AdmissionApply";
 
 const router = createBrowserRouter([
   {
@@ -66,39 +67,33 @@ const router = createBrowserRouter([
         path: "/notice-details/:id",
         element: <NoticeDetails></NoticeDetails>,
         loader: ({ params }) =>
-          fetch(
-            `https://bubt-university-server-mizanor21.vercel.app/notice-details/${params.id}`
-          ),
+          fetch(`http://localhost:5000/notice-details/${params.id}`),
       },
       {
         path: "/event-details/:id",
         element: <EventDetails></EventDetails>,
         loader: ({ params }) =>
-          fetch(
-            `https://bubt-university-server-mizanor21.vercel.app/event-details/${params.id}`
-          ),
+          fetch(`http://localhost:5000/event-details/${params.id}`),
       },
       {
         path: "/all-stories",
         element: <AllStories></AllStories>,
-        loader: () =>
-          fetch(
-            "https://bubt-university-server-mizanor21.vercel.app/all-stories"
-          ),
+        loader: () => fetch("http://localhost:5000/all-stories"),
       },
       {
         path: "/faculty",
         element: <Facultys></Facultys>,
-        loader: () =>
-          fetch("https://bubt-university-server-mizanor21.vercel.app/faculty"),
+        loader: () => fetch("http://localhost:5000/faculty"),
       },
       {
         path: "/faculty-details/:id",
         element: <FacultyDetails></FacultyDetails>,
         loader: ({ params }) =>
-          fetch(
-            `https://bubt-university-server-mizanor21.vercel.app/faculty-details/${params.id}`
-          ),
+          fetch(`http://localhost:5000/faculty-details/${params.id}`),
+      },
+      {
+        path: "/admission-apply",
+        element: <AdmissionApply></AdmissionApply>,
       },
     ],
   },

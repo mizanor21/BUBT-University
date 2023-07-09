@@ -51,7 +51,7 @@ const Navbar = () => {
     {
       label: "Admission",
       submenu: [
-        { label: "Submenu 1", path: "/" },
+        { label: "Admission Apply", path: "/admission-apply" },
         { label: "Submenu 2", path: "/" },
       ],
     },

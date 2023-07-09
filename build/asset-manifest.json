@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.ae287ac2.css",
-    "main.js": "/static/js/main.6d427c8f.js",
+    "main.css": "/static/css/main.c861b948.css",
+    "main.js": "/static/js/main.1b5fb5df.js",
     "static/js/787.f08b2713.chunk.js": "/static/js/787.f08b2713.chunk.js",
     "static/media/bubt.mp4": "/static/media/bubt.2c664cac7dda40127a4e.mp4",
-    "static/media/slider3.jpg": "/static/media/slider3.b96ce640c0e095aee9df.jpg",
+    "static/media/slide3.jpeg": "/static/media/slide3.9825a0d2ecaec03e2c2c.jpeg",
+    "static/media/slide4.jpeg": "/static/media/slide4.7ce447218acc0cabe7ab.jpeg",
     "static/media/convocation.jpeg": "/static/media/convocation.3c8b9eb8c7ea7ce76477.jpeg",
     "static/media/career.jpg": "/static/media/career.7a6b2282f3defb85a4e9.jpg",
     "static/media/uni-image-one.jpg": "/static/media/uni-image-one.4bbf430237cb08bbcca5.jpg",
+    "static/media/admission.jpg": "/static/media/admission.e975fc0618b6b6f77e7b.jpg",
     "static/media/slider1.jpg": "/static/media/slider1.03dcf1737bb27221c3c3.jpg",
-    "static/media/slider4.jpg": "/static/media/slider4.b0fdca79a1d7a06f9a82.jpg",
     "static/media/slider2.jpg": "/static/media/slider2.c7fc1156e9f1beb2a97e.jpg",
     "static/media/uni-image-two.jpg": "/static/media/uni-image-two.19d4f4223e2533436482.jpg",
     "static/media/bubtlogo.png": "/static/media/bubtlogo.7f43ee3dff96122cb03b.png",
     "static/media/about-bg-2.jpg": "/static/media/about-bg-2.a3ccd45605fce3bd0cb9.jpg",
     "static/media/bg2.png": "/static/media/bg2.37e3d58bb43185331064.png",
+    "static/media/bubt_logo.png": "/static/media/bubt_logo.6895e2139499681d21b8.png",
     "index.html": "/index.html",
-    "main.ae287ac2.css.map": "/static/css/main.ae287ac2.css.map",
-    "main.6d427c8f.js.map": "/static/js/main.6d427c8f.js.map",
+    "main.c861b948.css.map": "/static/css/main.c861b948.css.map",
+    "main.1b5fb5df.js.map": "/static/js/main.1b5fb5df.js.map",
     "787.f08b2713.chunk.js.map": "/static/js/787.f08b2713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae287ac2.css",
-    "static/js/main.6d427c8f.js"
+    "static/css/main.c861b948.css",
+    "static/js/main.1b5fb5df.js"
   ]
 }
