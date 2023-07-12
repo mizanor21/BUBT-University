@@ -90,7 +90,7 @@ const Navbar = () => {
         },
       ],
     },
-    { label: "Contacts", path: "/" },
+    { label: "Contacts", path: "/contactus" },
   ];
 
   useEffect(() => {

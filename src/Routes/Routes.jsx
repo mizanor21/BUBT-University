@@ -32,6 +32,7 @@ import IEEEBUBTStudentBranch from "../Pages/OtherPages/Clubs/IEEEBUBTStudentBran
 import BangladeshNationalCadetCorps from "../Pages/OtherPages/Clubs/BangladeshNationalCadetCorps";
 import BUBTMootCourtSocietyBMCS from "../Pages/OtherPages/Clubs/BUBTMootCourtSocietyBMCS";
 import BUBTPhotographyClub from "../Pages/OtherPages/Clubs/BUBTPhotographyClub";
+import ContactUs from "../Pages/OtherPages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -177,6 +178,10 @@ const router = createBrowserRouter([
       {
         path: "/BUBTPhotographyClub",
         element: <BUBTPhotographyClub></BUBTPhotographyClub>,
+      },
+      {
+        path: "/contactus",
+        element: <ContactUs></ContactUs>,
       },
     ],
   },
