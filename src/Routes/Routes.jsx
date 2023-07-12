@@ -17,6 +17,8 @@ import RulesAndRegulation from "../Pages/OtherPages/Academic/RulesAndRegulation/
 import SemesterPolicy from "../Pages/OtherPages/Academic/SemesterPolicy/SemesterPolicy";
 import SpecialFeature from "../Pages/OtherPages/Academic/SpecialFeature/SpecialFeature";
 import AdmissionApply from "../Pages/OtherPages/Admission/AdmissionApply";
+import ClassRoutine from "../Pages/OtherPages/Students/ClassRoutine/ClassRoutine";
+import ClassRoutineDetails from "../Pages/OtherPages/Students/ClassRoutine/ClassRoutineDetails";
 
 const router = createBrowserRouter([
   {
@@ -94,6 +96,16 @@ const router = createBrowserRouter([
       {
         path: "/admission-apply",
         element: <AdmissionApply></AdmissionApply>,
+      },
+      {
+        path: "/class-routine",
+        element: <ClassRoutine></ClassRoutine>,
+      },
+      {
+        path: "/class-routine/:id",
+        element: <ClassRoutineDetails></ClassRoutineDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/class-routine/${params.id}`),
       },
     ],
   },

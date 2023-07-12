@@ -58,7 +58,7 @@ const Navbar = () => {
     {
       label: "Students",
       submenu: [
-        { label: "Submenu 1", path: "/" },
+        { label: "Class Routine", path: "/class-routine" },
         { label: "Submenu 2", path: "/" },
       ],
     },

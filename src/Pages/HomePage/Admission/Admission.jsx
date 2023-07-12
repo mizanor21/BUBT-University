@@ -78,7 +78,7 @@ const Admission = () => {
             Get Admission
           </button>
           <dialog id="my_modal_4" className="modal">
-            <form method="dialog" className="modal-box w-11/12 max-w-5xl">
+            <form method="dialog" className="modal-box md:w-11/12 max-w-5xl">
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                 ✕
               </button>
