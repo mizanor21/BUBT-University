@@ -12,14 +12,14 @@ const ClassRoutine = () => {
   return (
     <div className="flex justify-center my-10">
       <div className="grid grid-cols-1 gap-5 font-serif md:w-[70%] lg:w-[50%]">
-        <div className="collapse collapse-plus bg-base-200">
+        <div className="collapse collapse-plus bg-slate-100">
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div className="collapse-title text-xl font-medium ">
             CLASS ROUTINE
           </div>
           <div className="collapse-content">
             <div className="grid grid-cols-1 gap-5">
-              <div className="collapse collapse-plus bg-base-300">
+              <div className="collapse collapse-plus bg-slate-200">
                 <input type="radio" name="my-accordion-4" />
                 <div className="collapse-title text-xl font-medium">
                   BI-SEMESTER
@@ -63,7 +63,7 @@ const ClassRoutine = () => {
                   </div>
                 </div>
               </div>
-              <div className="collapse collapse-plus bg-base-300">
+              <div className="collapse collapse-plus bg-slate-200">
                 <input type="radio" name="my-accordion-4" />
                 <div className="collapse-title text-xl font-medium">
                   BI-SEMESTER (TRI-BI)
@@ -110,7 +110,7 @@ const ClassRoutine = () => {
             </div>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-200">
+        <div className="collapse collapse-plus bg-slate-100">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-xl font-medium">
             EXAM SCHEDULE
@@ -119,7 +119,7 @@ const ClassRoutine = () => {
             <p>hello</p>
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-200">
+        <div className="collapse collapse-plus bg-slate-100">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-xl font-medium">
             SUPPLEMENTARY EXAM SCHEDULE
