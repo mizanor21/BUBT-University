@@ -19,6 +19,9 @@ import SpecialFeature from "../Pages/OtherPages/Academic/SpecialFeature/SpecialF
 import AdmissionApply from "../Pages/OtherPages/Admission/AdmissionApply";
 import ClassRoutine from "../Pages/OtherPages/Students/ClassRoutine/ClassRoutine";
 import ClassRoutineDetails from "../Pages/OtherPages/Students/ClassRoutine/ClassRoutineDetails";
+import ExamScheduleDetails from "../Pages/OtherPages/Students/ExamSchedule/ExamScheduleDetails";
+import ExamSchedule from "../Pages/OtherPages/Students/ExamSchedule/ExamSchedule";
+import SupleExam from "../Pages/OtherPages/Students/SupleExam/SupleExam";
 
 const router = createBrowserRouter([
   {
@@ -106,6 +109,20 @@ const router = createBrowserRouter([
         element: <ClassRoutineDetails></ClassRoutineDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/class-routine/${params.id}`),
+      },
+      {
+        path: "/exam-schedule",
+        element: <ExamSchedule></ExamSchedule>,
+      },
+      {
+        path: "/exam-schedule/:id",
+        element: <ExamScheduleDetails></ExamScheduleDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/exam-schedule/${params.id}`),
+      },
+      {
+        path: "/supplementary-exam-schedule",
+        element: <SupleExam></SupleExam>,
       },
     ],
   },

@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const ClassRoutine = () => {
-  const [routines, setRoutines] = useState([]);
+const ExamSchedule = () => {
+  const [examSchedule, setExamSchedule] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/class-routine")
+    fetch("http://localhost:5000/exam-schedule")
       .then((res) => res.json())
-      .then((data) => setRoutines(data));
+      .then((data) => setExamSchedule(data));
   }, []);
-
   return (
     <div className="flex justify-center my-10">
       <div className="grid grid-cols-1 gap-5 font-serif md:w-[70%] lg:w-[50%]">
         <div className="collapse collapse-plus bg-slate-100">
-          <input type="radio" name="my-accordion-3" checked="checked" />
-          <div className="collapse-title text-xl font-medium ">
-            CLASS ROUTINE
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            EXAM SCHEDULE
           </div>
           <div className="collapse-content">
             <div className="grid grid-cols-1 gap-5">
               <div className="collapse collapse-plus bg-slate-200">
                 <input type="radio" name="my-accordion-4" />
                 <div className="collapse-title text-xl font-medium">
-                  BI-SEMESTER
+                  MID TERM
                 </div>
                 <div className="collapse-content">
                   <div className="overflow-x-auto">
@@ -31,25 +30,23 @@ const ClassRoutine = () => {
                       {/* head */}
                       <thead>
                         <tr className="bg-slate-300">
-                          <th>SL</th>
                           <th>Program</th>
                           <th>View & Download</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {routines.map((routine, i) => {
-                          if (routine?.category === "BI") {
+                        {examSchedule.map((schedule) => {
+                          if (schedule?.category === "MID") {
                             return (
                               <tr
-                                key={routine._id}
-                                routine={routine}
+                                key={schedule._id}
+                                schedule={schedule}
                                 className="hover"
                               >
-                                <th>{i + 1}</th>
-                                <td>{routine.program}</td>
+                                <td>{schedule.program}</td>
                                 <td>
                                   <Link
-                                    to={routine._id}
+                                    to={schedule._id}
                                     className="btn btn-xs text-white bg-blue-600 border-none hover:bg-green-600"
                                   >
                                     view
@@ -66,34 +63,30 @@ const ClassRoutine = () => {
               </div>
               <div className="collapse collapse-plus bg-slate-200">
                 <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium">
-                  BI-SEMESTER (TRI-BI)
-                </div>
+                <div className="collapse-title text-xl font-medium">FINAL</div>
                 <div className="collapse-content">
                   <div className="overflow-x-auto">
                     <table className="table bg-slate-50">
                       {/* head */}
                       <thead>
-                        <tr>
-                          <th>SL</th>
+                        <tr className="bg-slate-300">
                           <th>Program</th>
                           <th>View & Download</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {routines.map((routine, i) => {
-                          if (routine?.category === "TRI-BI") {
+                        {examSchedule.map((schedule) => {
+                          if (schedule?.category === "FINAL") {
                             return (
                               <tr
-                                key={routine._id}
-                                routine={routine}
+                                key={schedule._id}
+                                schedule={schedule}
                                 className="hover"
                               >
-                                <th>{i + 1}</th>
-                                <td>{routine.program}</td>
+                                <td>{schedule.program}</td>
                                 <td>
                                   <Link
-                                    to={routine._id}
+                                    to={schedule._id}
                                     className="btn btn-xs text-white bg-blue-600 border-none hover:bg-green-600"
                                   >
                                     view
@@ -116,4 +109,4 @@ const ClassRoutine = () => {
   );
 };
 
-export default ClassRoutine;
+export default ExamSchedule;

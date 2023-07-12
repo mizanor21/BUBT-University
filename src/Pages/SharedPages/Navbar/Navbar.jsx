@@ -59,7 +59,11 @@ const Navbar = () => {
       label: "Students",
       submenu: [
         { label: "Class Routine", path: "/class-routine" },
-        { label: "Submenu 2", path: "/" },
+        { label: "Exam Schedule", path: "/exam-schedule" },
+        {
+          label: "supplementary Exam Schedule",
+          path: "/supplementary-exam-schedule",
+        },
       ],
     },
     {
@@ -115,7 +119,7 @@ const Navbar = () => {
                   {item.label}
                 </NavLink>
                 {item.submenu && activeMenu === index && (
-                  <ul className="absolute left-0 mt-2 py-2 bg-white rounded shadow-lg flex flex-wrap">
+                  <ul className="absolute left-0 mt-2 py-2 bg-white rounded shadow-lg">
                     {item.submenu.map((subItem, subIndex) => (
                       <li key={subIndex}>
                         <NavLink
