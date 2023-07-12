@@ -13,7 +13,7 @@ const ExamSchedule = () => {
     <div className="flex justify-center my-10">
       <div className="grid grid-cols-1 gap-5 font-serif md:w-[70%] lg:w-[50%]">
         <div className="collapse collapse-plus bg-slate-100">
-          <input type="radio" name="my-accordion-3" />
+          <input type="radio" name="my-accordion-3 " checked="checked" />
           <div className="collapse-title text-xl font-medium">
             EXAM SCHEDULE
           </div>

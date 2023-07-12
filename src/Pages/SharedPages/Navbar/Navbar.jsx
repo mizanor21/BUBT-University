@@ -69,8 +69,25 @@ const Navbar = () => {
     {
       label: "Clubs",
       submenu: [
-        { label: "Submenu 1", path: "/" },
-        { label: "Submenu 2", path: "/" },
+        { label: "Business Club", path: "/BusinessClub" },
+        { label: "Cultural Club", path: "/CulturalClub" },
+        { label: "DebatingClub", path: "/DebatingClub" },
+        { label: "BUBT IT Club", path: "/BUBTITClub" },
+        { label: "Rover Scout", path: "/RoverScout" },
+        { label: "BUBT Sports Club", path: "/BUBTSportsClub" },
+        { label: "IEEE BUBT Student Branch", path: "/IEEEBUBTStudentBranch" },
+        {
+          label: "Bangladesh National Cadet Corps",
+          path: "/BangladeshNationalCadetCorps",
+        },
+        {
+          label: "BUBT Moot Court Society BMCS",
+          path: "/BUBTMootCourtSocietyBMCS",
+        },
+        {
+          label: "BUBT Photography Club",
+          path: "/BUBTPhotographyClub",
+        },
       ],
     },
     { label: "Contacts", path: "/" },
