@@ -61,7 +61,7 @@ const Navbar = () => {
         { label: "Class Routine", path: "/class-routine" },
         { label: "Exam Schedule", path: "/exam-schedule" },
         {
-          label: "supplementary Exam Schedule",
+          label: "Supplementary Exam Schedule",
           path: "/supplementary-exam-schedule",
         },
       ],

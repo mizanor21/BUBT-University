@@ -134,6 +134,8 @@ const router = createBrowserRouter([
       {
         path: "/supplementary-exam-schedule",
         element: <SupleExam></SupleExam>,
+        loader: () =>
+          fetch("http://localhost:5000/supplementary-exam-schedule"),
       },
       {
         path: "/BusinessClub",
