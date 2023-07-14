@@ -4,7 +4,7 @@ import logo from "../../../assets/images/bubtlogo.png";
 
 const Footer = () => {
   return (
-    <section className="bg-slate-100">
+    <section className="bg-slate-200">
       <footer className="container mx-auto footer p-10  text-base-content">
         <div>
           <img className="w-20" src={logo} alt="" />
