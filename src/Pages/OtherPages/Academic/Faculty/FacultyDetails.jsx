@@ -8,6 +8,7 @@ const FacultyDetails = () => {
     position,
     department,
     facultyCode,
+    office,
     email,
     education,
     publication,
@@ -18,12 +19,12 @@ const FacultyDetails = () => {
     <div className="bg-slate-100">
       <div className="flex justify-center items-center mx-5">
         <div className="my-20">
-          <div className="border-b-4 border-green-600 rounded-md bg-white lg:flex lg:min-w-[800px]">
-            <div className="flex justify-center items-center lg:absolute lg:left-[330px] lg:top-[220px]">
+          <div className="relative border-b-4 border-green-600 rounded-md bg-white md:flex">
+            <div className="flex justify-center items-center lg:absolute -left-32 top-14">
               <img
                 src={img}
                 alt="img not found!"
-                className="rounded-sm lg:w-[200px]"
+                className="rounded-sm w-[200px] h-[200px] shadow-2xl"
               />
             </div>
             <div className="mx-5 lg:mx-24 py-8 font-serif">
@@ -33,7 +34,7 @@ const FacultyDetails = () => {
               <p className="text-gray-700 ">
                 Faculty Code: <span className="font-bold">{facultyCode}</span>
               </p>
-              <p className="text-gray-700 mt-2">Room No: 421 , EXT: 193</p>
+              <p className="text-gray-700 mt-2">Office: {office}</p>
               <Link className="text-gray-700">
                 Email: <span className="btn-link">{email}</span>
               </Link>
