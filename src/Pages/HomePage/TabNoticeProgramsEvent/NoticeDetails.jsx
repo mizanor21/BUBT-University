@@ -10,7 +10,7 @@ const NoticeDetails = () => {
         <iframe
           width="100%"
           height="800"
-          src="https://www.docdroid.net/e4nT0YK/output-pdf"
+          src={document}
           frameborder="0"
           allowtransparency
           allowfullscreen
