@@ -33,6 +33,9 @@ import BangladeshNationalCadetCorps from "../Pages/OtherPages/Clubs/BangladeshNa
 import BUBTMootCourtSocietyBMCS from "../Pages/OtherPages/Clubs/BUBTMootCourtSocietyBMCS";
 import BUBTPhotographyClub from "../Pages/OtherPages/Clubs/BUBTPhotographyClub";
 import ContactUs from "../Pages/OtherPages/ContactUs/ContactUs";
+import UndergraduateAdmission from "../Pages/OtherPages/Admission/UndergraduateAdmission";
+import GraduateAdmission from "../Pages/OtherPages/Admission/GraduateAdmission";
+import ProgramDetails from "../Pages/HomePage/TabNoticeProgramsEvent/Programs/ProgramsDetails/ProgramDetails";
 
 const router = createBrowserRouter([
   {
@@ -106,6 +109,20 @@ const router = createBrowserRouter([
         element: <FacultyDetails></FacultyDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/faculty-details/${params.id}`),
+      },
+      {
+        path: "/undergraduate-programs",
+        element: <UndergraduateAdmission></UndergraduateAdmission>,
+      },
+      {
+        path: "/graduate-programs",
+        element: <GraduateAdmission></GraduateAdmission>,
+      },
+      {
+        path: "/program-details/:id",
+        element: <ProgramDetails></ProgramDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/program-details/${params.id}`),
       },
       {
         path: "/admission-apply",

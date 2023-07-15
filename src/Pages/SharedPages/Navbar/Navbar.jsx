@@ -51,8 +51,9 @@ const Navbar = () => {
     {
       label: "Admission",
       submenu: [
-        { label: "Admission Apply", path: "/admission-apply" },
-        { label: "Submenu 2", path: "/" },
+        { label: "Undergraduate Programs", path: "/undergraduate-programs" },
+        { label: "Graduate Programs", path: "/graduate-programs" },
+        { label: "Online Apply", path: "/admission-apply" },
       ],
     },
     {
