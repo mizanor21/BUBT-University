@@ -5,7 +5,7 @@ const ClassRoutine = () => {
   const [routines, setRoutines] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/class-routine")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/class-routine")
       .then((res) => res.json())
       .then((data) => setRoutines(data));
   }, []);

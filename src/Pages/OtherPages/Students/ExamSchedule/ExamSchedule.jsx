@@ -5,7 +5,7 @@ const ExamSchedule = () => {
   const [examSchedule, setExamSchedule] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/exam-schedule")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/exam-schedule")
       .then((res) => res.json())
       .then((data) => setExamSchedule(data));
   }, []);

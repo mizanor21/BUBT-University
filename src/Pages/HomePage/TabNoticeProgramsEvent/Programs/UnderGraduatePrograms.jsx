@@ -5,7 +5,7 @@ const UndergraduatePrograms = () => {
   const [programs, setPrograms] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/degree-offering")
+    fetch("https://bubt-university-server-mizanor21.vercel.app/degree-offering")
       .then((res) => res.json())
       .then((data) => setPrograms(data));
   }, []);

@@ -86,29 +86,39 @@ const router = createBrowserRouter([
         path: "/notice-details/:id",
         element: <NoticeDetails></NoticeDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/notice-details/${params.id}`),
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/notice-details/${params.id}`
+          ),
       },
       {
         path: "/event-details/:id",
         element: <EventDetails></EventDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/event-details/${params.id}`),
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/event-details/${params.id}`
+          ),
       },
       {
         path: "/all-stories",
         element: <AllStories></AllStories>,
-        loader: () => fetch("http://localhost:5000/all-stories"),
+        loader: () =>
+          fetch(
+            "https://bubt-university-server-mizanor21.vercel.app/all-stories"
+          ),
       },
       {
         path: "/faculty",
         element: <Facultys></Facultys>,
-        loader: () => fetch("http://localhost:5000/faculty"),
+        loader: () =>
+          fetch("https://bubt-university-server-mizanor21.vercel.app/faculty"),
       },
       {
         path: "/faculty-details/:id",
         element: <FacultyDetails></FacultyDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/faculty-details/${params.id}`),
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/faculty-details/${params.id}`
+          ),
       },
       {
         path: "/undergraduate-programs",
@@ -122,7 +132,9 @@ const router = createBrowserRouter([
         path: "/program-details/:id",
         element: <ProgramDetails></ProgramDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/program-details/${params.id}`),
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/program-details/${params.id}`
+          ),
       },
       {
         path: "/admission-apply",
@@ -136,7 +148,9 @@ const router = createBrowserRouter([
         path: "/class-routine/:id",
         element: <ClassRoutineDetails></ClassRoutineDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/class-routine/${params.id}`),
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/class-routine/${params.id}`
+          ),
       },
       {
         path: "/exam-schedule",
@@ -146,13 +160,17 @@ const router = createBrowserRouter([
         path: "/exam-schedule/:id",
         element: <ExamScheduleDetails></ExamScheduleDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/exam-schedule/${params.id}`),
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/exam-schedule/${params.id}`
+          ),
       },
       {
         path: "/supplementary-exam-schedule",
         element: <SupleExam></SupleExam>,
         loader: () =>
-          fetch("http://localhost:5000/supplementary-exam-schedule"),
+          fetch(
+            "https://bubt-university-server-mizanor21.vercel.app/supplementary-exam-schedule"
+          ),
       },
       {
         path: "/BusinessClub",
