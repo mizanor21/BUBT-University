@@ -1,5 +1,6 @@
 import React from "react";
 import image1 from "../../../../assets/images/convocation.jpeg";
+import { Link } from "react-router-dom";
 
 const History = () => {
   return (
@@ -8,14 +9,56 @@ const History = () => {
       <div className="relative">
         <img src={image1} alt="Banner" className="object-cover w-full h-64" />
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <h1 className="text-white text-4xl font-bold"> History</h1>
+          <h1 className="text-white text-4xl font-serif font-bold"> History</h1>
+          <div className="text-sm text-white breadcrumbs">
+            <ul>
+              <li>
+                <Link to={"/"}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4 mr-2 stroke-current"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4 mr-2 stroke-current"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  History
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       {/* => Text/Infor For History */}
 
       <div className="bg-none py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">History</h2>
+          <h2 className="text-3xl font-bold font-serif text-gray-800 mb-4">
+            History
+          </h2>
           <p className="text-gray-700 leading-relaxed text-justify">
             Bangladesh University of Business and Technology (BUBT) was
             established under the Private University Act in the year 2003

@@ -65,6 +65,7 @@ const Navbar = () => {
           label: "Supplementary Exam Schedule",
           path: "/supplementary-exam-schedule",
         },
+        { label: "Result", path: "/result" },
       ],
     },
     {
@@ -114,7 +115,7 @@ const Navbar = () => {
         showNavbar ? "show" : "hide"
       }`}
     >
-      <div className="container mx-auto flex justify-between py-4">
+      <div className="px-5 container mx-auto flex justify-between py-4">
         <div className="flex items-center">
           <NavLink to={"/"}>
             <img className="w-52 md:w-64" src={logo} alt="" />

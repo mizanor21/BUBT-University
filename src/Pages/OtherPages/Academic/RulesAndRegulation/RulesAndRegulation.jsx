@@ -1,6 +1,7 @@
 import React from "react";
 import image1 from "../../../../assets/images/convocation.jpeg";
 import { Fade, Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 
 const RulesAndRegulation = () => {
   return (
@@ -9,15 +10,57 @@ const RulesAndRegulation = () => {
       <div className="relative">
         <img src={image1} alt="Banner" className="object-cover w-full h-64" />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50 bg-gray-900">
-          <h1 className="text-white text-4xl font-bold">
+          <h1 className="text-white font-bold text-2xl lg:text-3xl">
             Rules And Regulation
           </h1>
+          <div className="text-sm text-white breadcrumbs">
+            <ul>
+              <li>
+                <Link to={"/"}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4 mr-2 stroke-current"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4 mr-2 stroke-current"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                    ></path>
+                  </svg>
+                  Roles and Regulation
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       {/* Text Rules and Regulations  */}
       <div className="my-8 mx-auto max-w-2xl text-justify">
         <Slide>
-          <p className="mb-4 font-bold animate-fade-in">Academic Standards:</p>
+          <p className="mb-4 font-bold text-2xl lg:text-3xl animate-fade-in">
+            Academic Standards
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p className="animate-fade-in">
@@ -29,7 +72,9 @@ const RulesAndRegulation = () => {
         </Fade>
         <Slide>
           {" "}
-          <p className="mt-8 mb-4 font-bold">Registration:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Registration
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -45,7 +90,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Late Registration:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Late Registration
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -56,7 +103,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Orientation:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Orientation
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -66,7 +115,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Student Identification Cards:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Student Identification Cards
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -77,7 +128,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Course Offerings:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Course Offerings
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -93,7 +146,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Course Load:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Course Load
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -104,7 +159,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Course Sequence:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Course Sequence
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -118,7 +175,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Class Attendance:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Class Attendance
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -133,7 +192,7 @@ const RulesAndRegulation = () => {
         <div className="overflow-x-auto mt-8">
           <table className="table table-zebra">
             <thead>
-              <tr>
+              <tr className="bg-slate-200">
                 <th></th>
                 <th>Percentage of Attendance</th>
                 <th>Marks (Other than LL.B & LL.M)</th>
@@ -175,7 +234,9 @@ const RulesAndRegulation = () => {
           </table>
         </div>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Policy for Semester Promotion:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Policy for Semester Promotion
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -196,7 +257,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Repeating Courses:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Repeating Courses
+          </p>
         </Slide>{" "}
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -212,7 +275,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Retake / Repeat Fees:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Retake / Repeat Fees
+          </p>
         </Slide>
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>
@@ -224,7 +289,9 @@ const RulesAndRegulation = () => {
           </p>
         </Fade>
         <Slide>
-          <p className="mt-8 mb-4 font-bold">Withdrawal from a Course:</p>
+          <p className="mt-8 mb-4 font-bold text-2xl lg:text-3xl">
+            Withdrawal from a Course
+          </p>
         </Slide>{" "}
         <Fade delay={1e3} cascade damping={1e-1}>
           <p>

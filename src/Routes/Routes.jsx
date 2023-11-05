@@ -36,6 +36,8 @@ import ContactUs from "../Pages/OtherPages/ContactUs/ContactUs";
 import UndergraduateAdmission from "../Pages/OtherPages/Admission/UndergraduateAdmission";
 import GraduateAdmission from "../Pages/OtherPages/Admission/GraduateAdmission";
 import ProgramDetails from "../Pages/HomePage/TabNoticeProgramsEvent/Programs/ProgramsDetails/ProgramDetails";
+import Result from "../Pages/OtherPages/Students/Result/Result";
+import ResultDetails from "../Pages/OtherPages/Students/Result/ResultDetails";
 
 const router = createBrowserRouter([
   {
@@ -170,6 +172,18 @@ const router = createBrowserRouter([
         loader: () =>
           fetch(
             "https://bubt-university-server-mizanor21.vercel.app/supplementary-exam-schedule"
+          ),
+      },
+      {
+        path: "/result",
+        element: <Result></Result>,
+      },
+      {
+        path: "/result/:id",
+        element: <ResultDetails></ResultDetails>,
+        loader: ({ params }) =>
+          fetch(
+            `https://bubt-university-server-mizanor21.vercel.app/result/${params.id}`
           ),
       },
       {

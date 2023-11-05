@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2023-08-20"); // Replace with your target date
+    const targetDate = new Date("2024-01-10"); // Replace with your target date
     const currentDate = new Date();
 
     const totalSeconds = Math.floor((targetDate - currentDate) / 1000);

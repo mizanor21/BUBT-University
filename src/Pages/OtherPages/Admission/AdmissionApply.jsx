@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const AdmissionApply = () => {
   const [selectedProgram, setSelectedProgram] = useState("");
@@ -25,7 +26,10 @@ const AdmissionApply = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Successfully information submission!");
+          toast.success("Submitted, Please Check email.");
+          // alert("Successfully information submission!");
+          form.current.reset();
+          setSelectedProgram("");
         },
         (error) => {
           console.log(error.text);
@@ -41,13 +45,13 @@ const AdmissionApply = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-10">
-      <div className="bg-slate-100 shadow-lg rounded-lg p-5 md:p-10 lg:p-20">
+    <div className="flex justify-center items-center py-10 px-5 ">
+      <div className="bg-slate-100 shadow-lg rounded-lg p-5 md:p-10 lg:p-20 max-w-3xl mx-5 md:mx-0">
         <h3 className="text-2xl text-center mb-10">
           ভর্তি পরামর্শ এবং তথ্যের জন্য ফর্মটি পূরণ করুন
         </h3>
         <form ref={form} onSubmit={sendEmail} className="">
-          <div className="form-control md:min-w-[600px]">
+          <div className="form-control">
             <label className="label">
               <span className="label-text">
                 Choose Program <span className="text-red-600">*</span>
@@ -56,25 +60,36 @@ const AdmissionApply = () => {
             <select
               required
               className="select select-bordered select-success"
+              name="selectedProgram"
               value={selectedProgram}
               onChange={handleProgramChange}
               defaultValue=""
             >
-              <option value="">Pick one</option>
-              <option value="bba">BBA</option>
-              <option value="cse">BSc. Engg in CSE</option>
-              <option value="eee">BSc. in EEE</option>
-              <option value="textile">BSc. in Textile Engineering</option>
-              <option value="civil">BSc. in Civil Engineering</option>
-              <option value="english">BA (Hons) in English</option>
-              <option value="economics">BSc. (Hons) in Economics</option>
-              <option value="llb">LL.B (Hons)</option>
-              <option value="cse_eve">BSc. Engg in CSE (Evening)</option>
-              <option value="eee_eve">BSc. in EEE (Evening)</option>
-              <option value="textile_eve">
+              <option value="">Select Program</option>
+              <option value="BBA">BBA</option>
+              <option value="BSc. Engg in CSE">BSc. Engg in CSE</option>
+              <option value="BSc. in EEE">BSc. in EEE</option>
+              <option value="BSc. in Textile Engineering">
+                BSc. in Textile Engineering
+              </option>
+              <option value="BSc. in Civil Engineering">
+                BSc. in Civil Engineering
+              </option>
+              <option value="BA (Hons) in English">BA (Hons) in English</option>
+              <option value="BSc. (Hons) in Economics">
+                BSc. (Hons) in Economics
+              </option>
+              <option value="LL.B (Hons)">LL.B (Hons)</option>
+              <option value="BSc. Engg in CSE (Evening)">
+                BSc. Engg in CSE (Evening)
+              </option>
+              <option value="BSc. in EEE (Evening)">
+                BSc. in EEE (Evening)
+              </option>
+              <option value="BSc. in Textile Engineering (Evening)">
                 BSc. in Textile Engineering (Evening)
               </option>
-              <option value="civil_eve">
+              <option value="BSc. in Civil Engineering (Evening)">
                 BSc. in Civil Engineering (Evening)
               </option>
             </select>
@@ -133,7 +148,7 @@ const AdmissionApply = () => {
                 required
                 type="text"
                 name="ssc_result"
-                placeholder="A+"
+                placeholder="CGPA"
                 className="input input-bordered input-success"
               />
             </div>
@@ -165,7 +180,7 @@ const AdmissionApply = () => {
                 required
                 type="text"
                 name="hsc_result"
-                placeholder="A+"
+                placeholder="CGPA"
                 className="input input-bordered input-success w-full"
               />
             </div>
@@ -180,7 +195,7 @@ const AdmissionApply = () => {
                 required
                 type="number"
                 name="hsc_passing"
-                placeholder="01848081720"
+                placeholder="Passing Year"
                 className="input input-bordered input-success w-full"
               />
             </div>

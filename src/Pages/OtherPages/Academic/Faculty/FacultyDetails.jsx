@@ -16,7 +16,7 @@ const FacultyDetails = () => {
     conferences,
   } = useLoaderData();
   return (
-    <div className="bg-slate-100">
+    <div className="">
       <div className="flex justify-center items-center mx-5">
         <div className="my-20">
           <div className="relative border-b-4 border-green-600 rounded-md bg-white md:flex">

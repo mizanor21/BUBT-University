@@ -9,7 +9,7 @@ const Alumni = () => {
       .then((data) => setAlumnis(data));
   }, []);
   return (
-    <div className="bg-white my-10 py-5">
+    <div className="my-10 py-5">
       <div className="hidden md:block">
         <h1 className="text-center text-4xl font-serif font-bold mb-10">
           Distinguished Guests and Alumni
